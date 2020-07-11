@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /WDTransfer/zsh/oh-my-zsh/plugins/zsh-navigation-tools</title>
+ </head>
+ <body>
+<h1>Index of /WDTransfer/zsh/oh-my-zsh/plugins/zsh-navigation-tools</h1>
+<ul><li><a href="/WDTransfer/zsh/oh-my-zsh/plugins/"> Parent Directory</a></li>
+<li><a href=".config/"> .config/</a></li>
+<li><a href="LICENSE"> LICENSE</a></li>
+<li><a href="NEWS"> NEWS</a></li>
+<li><a href="README.md"> README.md</a></li>
+<li><a href="_n-kill"> _n-kill</a></li>
+<li><a href="n-aliases"> n-aliases</a></li>
+<li><a href="n-cd"> n-cd</a></li>
+<li><a href="n-env"> n-env</a></li>
+<li><a href="n-functions"> n-functions</a></li>
+<li><a href="n-help"> n-help</a></li>
+<li><a href="n-history"> n-history</a></li>
+<li><a href="n-kill"> n-kill</a></li>
+<li><a href="n-list"> n-list</a></li>
+<li><a href="n-list-draw"> n-list-draw</a></li>
+<li><a href="n-list-input"> n-list-input</a></li>
+<li><a href="n-options"> n-options</a></li>
+<li><a href="n-panelize"> n-panelize</a></li>
+<li><a href="znt-cd-widget"> znt-cd-widget</a></li>
+<li><a href="znt-history-widget"> znt-history-widget</a></li>
+<li><a href="znt-kill-widget"> znt-kill-widget</a></li>
+<li><a href="znt-tmux.zsh"> znt-tmux.zsh</a></li>
+<li><a href="znt-usetty-wrapper"> znt-usetty-wrapper</a></li>
+<li><a href="zsh-navigation-tools.plugin.zsh"> zsh-navigation-tools.plugin.zsh</a></li>
+</ul>
+</body></html>

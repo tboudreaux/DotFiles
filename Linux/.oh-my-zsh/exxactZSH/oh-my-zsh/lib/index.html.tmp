@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /WDTransfer/zsh/oh-my-zsh/lib</title>
+ </head>
+ <body>
+<h1>Index of /WDTransfer/zsh/oh-my-zsh/lib</h1>
+<ul><li><a href="/WDTransfer/zsh/oh-my-zsh/"> Parent Directory</a></li>
+<li><a href="bzr.zsh"> bzr.zsh</a></li>
+<li><a href="clipboard.zsh"> clipboard.zsh</a></li>
+<li><a href="compfix.zsh"> compfix.zsh</a></li>
+<li><a href="completion.zsh"> completion.zsh</a></li>
+<li><a href="correction.zsh"> correction.zsh</a></li>
+<li><a href="diagnostics.zsh"> diagnostics.zsh</a></li>
+<li><a href="directories.zsh"> directories.zsh</a></li>
+<li><a href="functions.zsh"> functions.zsh</a></li>
+<li><a href="git.zsh"> git.zsh</a></li>
+<li><a href="grep.zsh"> grep.zsh</a></li>
+<li><a href="history.zsh"> history.zsh</a></li>
+<li><a href="key-bindings.zsh"> key-bindings.zsh</a></li>
+<li><a href="misc.zsh"> misc.zsh</a></li>
+<li><a href="nvm.zsh"> nvm.zsh</a></li>
+<li><a href="prompt_info_functions.zsh"> prompt_info_functions.zsh</a></li>
+<li><a href="spectrum.zsh"> spectrum.zsh</a></li>
+<li><a href="termsupport.zsh"> termsupport.zsh</a></li>
+<li><a href="theme-and-appearance.zsh"> theme-and-appearance.zsh</a></li>
+</ul>
+</body></html>
