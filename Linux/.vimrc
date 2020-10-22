@@ -4,7 +4,11 @@ filetype off                  " required
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
 
+
+" Vim Plugins
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
@@ -12,28 +16,17 @@ Plugin 'chrisbra/csv.vim'
 
 Plugin 'reedes/vim-pencil'
 
-Plugin 'itchyny/lightline.vim'
+" Plugin 'itchyny/lightline.vim'
+
+Plugin 'vim-airline/vim-airline'
+
+Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'junegunn/goyo.vim'
 
 Plugin 'terryma/vim-multiple-cursors'
 
 Plugin 'rking/ag.vim'
-
-set laststatus=2
-set noshowmode
-
-
-Plugin 'scrooloose/nerdtree'
-let NERDTreeQuitOnOpen=1
-
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
-
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
-map <C-o> :NERDTreeToggle<CR>
 
 Plugin 'tomtom/tcomment_vim'
 
@@ -45,7 +38,25 @@ Plugin 'junegunn/fzf'
 
 Plugin 'wincent/command-t'
 
-Plugin 'rudrab/vimf90'
+Plugin 'scrooloose/nerdtree'
+
+Plugin 'christoomey/vim-tmux-navigator'
+
+set laststatus=2
+set noshowmode
+set wildmenu
+
+
+let NERDTreeQuitOnOpen=1
+
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+map <C-o> :NERDTreeToggle<CR>
+
 
 set tabstop=4
 set softtabstop=0 noexpandtab
@@ -62,9 +73,18 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 syntax on
-
+set showcmd
 " colorscheme atom-dark-256
-colorscheme brogrammer
+colorscheme dracula
+let g:airline_powerline_fonts = 1
+let g:airline_theme='violet'
+set ruler
+
+" let fortran_have_tabs=1
+if has('syntax') && (&t_Co > 2)
+	syntax  enable
+endif
+
 set number
 set pastetoggle=<F2>
 
@@ -88,3 +108,7 @@ augroup numbertoggle
   autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
+
+
+map <ScrollWheelUp> <C-Y>
+map <ScrollWheelDown> <C-E>
