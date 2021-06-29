@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Volumes/SAOExternal/simulations/TestSimulations/preCulsterTests/N3k_K_T10000_t3/run_meta'
+let g:netrw_dirhist_2='/Users/tboudreaux/Documents/SAOSummer2018REU/code/easyRun'
+let g:netrw_dirhist_3='/Users/tboudreaux/Documents/SAOSummer2018REU/code/easyRun/scripts'
+let g:netrw_dirhist_4='/Users/tboudreaux/Documents/SAOSummer2018REU/code/easyRun'
+let g:netrw_dirhist_5='/Users/tboudreaux/Documents/SAOSummer2018REU/code/easyRun/inputTest'
+let g:netrw_dirhist_6='/Users/tboudreaux/Documents/SAOSummer2018REU/code/easyRun'
+let g:netrw_dirhist_7='/Users/tboudreaux/Documents/SAOSummer2018REU/code/easyRun/scripts'
