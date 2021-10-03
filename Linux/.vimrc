@@ -1,46 +1,51 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+" set rtp+=~/.vim/bundle/YouComplete/Me
+" let g:ycm_global_extra_conf = "~/.ycm_extra_global_conf.py"
+
+call plug#begin('~/.vim/plugged')
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tomtom/tcomment_vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'simnalamburt/vim-mundo'
+call plug#end() 
+
+nnoremap <F5> :MundoToggle<CR>
+
+imap <C-l> <Plug>(coc-snippets-expand)
+imap <C-j> <Plug>(coc-snippets-select)
+
+let g:coc_snippet_next = '<c-j>'
+
+let g:coc_snippet_prev = '<c-k>'
+
+" Use <C-j> for both expand and jump (make expand higher priority.)
+imap <C-j> <Plug>(coc-snippets-expand-jump)
+
+" Use <leader>x for convert visual selected code to snippet
+xmap <leader>x  <Plug>(coc-convert-snippet)
 
 
-" Vim Plugins
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'chrisbra/csv.vim'
+" use <tab> for trigger completion and navigate to the next complete item
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
 
-Plugin 'reedes/vim-pencil'
+inoremap <silent><expr> <Tab>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<Tab>" :
+      \ coc#refresh()
 
-" Plugin 'itchyny/lightline.vim'
-"
-Plugin 'vim-airline/vim-airline'
 
-Plugin 'vim-airline/vim-airline-themes'
 
-Plugin 'junegunn/goyo.vim'
 
-Plugin 'terryma/vim-multiple-cursors'
-
-Plugin 'rking/ag.vim'
-
-Plugin 'tomtom/tcomment_vim'
-
-Plugin 'ctrlpvim/ctrlp.vim'
-
-Plugin 'airblade/vim-gitgutter'
-
-Plugin 'junegunn/fzf'
-
-Plugin 'wincent/command-t'
-
-Plugin 'scrooloose/nerdtree'
-
-Plugin 'christoomey/vim-tmux-navigator'
 
 set laststatus=2
 set noshowmode
@@ -65,17 +70,16 @@ set shiftwidth=4
 set background=dark
 set t_Co=256
 
-syn match pyFunction "\<\k\+\ze("
-hi link pyFunction Function
+" syn match pyFunction "\<\k\+\ze("
+" hi link pyFunction Function
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
 filetype plugin indent on    " required
 
 syntax on
 set showcmd
-" let g:airline_left_sep=''
-" let g:airline_right_sep=''
+let g:airline_left_sep=''
+let g:airline_right_sep=''
 set linespace=0
 " colorscheme atom-dark-256
 colorscheme gruvbox
@@ -86,7 +90,7 @@ let g:airline#extensions#tabline#show_close_button = 0 " remove 'X' at the end o
 let g:airline#extensions#tabline#tabs_label = ''       " can put text here like BUFFERS to denote buffers (I clear it so nothing is shown)
 let g:airline#extensions#tabline#buffers_label = ''    " can put text here like TABS to denote tabs (I clear it so nothing is shown)      
 let g:airline#extensions#tabline#fnamemod = ':t'       " disable file paths in the tab                                                    
-let g:airline#extensions#tabline#show_tab_count = 0    " dont show tab numbers on the right                                                           
+let g:airline#extensions#tabline#show_tab_count = 0    " dont show tab numbers on the right 
 let g:airline#extensions#tabline#show_buffers = 0      " dont show buffers in the tabline                                                 
 let g:airline#extensions#tabline#tab_min_count = 2     " minimum of 2 tabs needed to display the tabline                                  
 let g:airline#extensions#tabline#show_splits = 0       " disables the buffer name that displays on the right of the tabline               
@@ -113,16 +117,15 @@ command! CO TComment
 command NTS vertical resize 35
 
 highlight NERDTreeCWD ctermfg=white
-" command NTS NerdTreeSize
-"
-set number relativenumber
-
-augroup numbertoggle
-  autocmd!
-  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-augroup END
 
 
 map <ScrollWheelUp> <C-Y>
 map <ScrollWheelDown> <C-E>
+let g:matchparen_timeout = 10
+let g:matchparen_insert_timeout = 10
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>
+set colorcolumn=80
+set backspace=indent,eol,start
+
+map <C-s> :set scrollbind<CR>
