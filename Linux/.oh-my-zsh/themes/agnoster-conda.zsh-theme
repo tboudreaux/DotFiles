@@ -205,11 +205,7 @@ prompt_virtualenv() {
 }
 
 prompt_newline(){
-	# prompt_segment black white "\n"
-}
-
-prompt_command(){
-	prompt_segment_close white white
+	prompt_segment_close black black "\n"
 }
 
 
@@ -236,37 +232,18 @@ prompt_time(){
 }
 
 ## Main prompt
-prompt_line_a(){
+build_prompt() {
   RETVAL=$?
   prompt_status
+	# prompt_time
   prompt_context
   prompt_dir
   prompt_git
   prompt_virtualenv
-	prompt_end
-}
-prompt_line_b(){
-	prompt_command
+	# prompt_newline
   prompt_end
 }
-# build_prompt() {
-#   RETVAL=$?
-#   prompt_status
-# 	# prompt_time
-#   prompt_context
-#   prompt_dir
-#   prompt_git
-#   prompt_virtualenv
-# 	prompt_end
-# 	prompt_newline
-# 	prompt_command
-#   prompt_end
-# }
 
 
 
-# PROMPT='%{%f%b%k%}$(build_prompt) '
-NEWLINE=$'\n'
-CYAN=$'\u001b[36m'
-RESET=$'\u001b[0m'
-PROMPT='%{%f%b%k%}$(prompt_line_a)${NEWLINE}%{%f%b%k%} ${CYAN}❯${RESET} '
+PROMPT='%{%f%b%k%}$(build_prompt) '
